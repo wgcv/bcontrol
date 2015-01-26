@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+<head>
+	
+</head>
+<body>
+
+{{perfil.nombre}} {{perfil.nombreSegundo}} 
+<br>
+{{perfil.apellido}} {{perfil.apellidoSegundo}}
+<br>
+{{perfil.cedulaBomberil}}
+<br>
+{{perfil.compania}}
+<br>
+{{perfil.rango}}
+<br>
+{{perfil.tipoSangre}}
+<br>
+{% for curso in perfil.cursos.all %}
+{{curso.nombre}}
+<br>
+{% endfor %}
+
+</body>
+</html>

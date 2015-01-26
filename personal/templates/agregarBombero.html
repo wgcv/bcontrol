@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post">
+	    <div id="form">
+	        {% csrf_token %}
+	        {% for field in formUsuario %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }} 
+    </div>
+{% endfor %}
+{% for field in formBombero %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }} {{ field.help_text }}
+    </div> 
+{% endfor %}
+
+
+		    <input type="submit">
+	
+		</div>
+			</form>
+</body>
+</html>
+
